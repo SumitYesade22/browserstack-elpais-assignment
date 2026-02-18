@@ -1,4 +1,4 @@
-# 🚀 El País Opinion Scraper with BrowserStack Parallel Execution
+#  El País Opinion Scraper with BrowserStack Parallel Execution
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Selenium](https://img.shields.io/badge/Selenium-4.x-green)

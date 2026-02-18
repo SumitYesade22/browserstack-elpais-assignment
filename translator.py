@@ -33,15 +33,15 @@ def translate_text(text: str) -> str:
         if response.status_code == 200:
             data = response.json()
 
-            # Based on provider response format
+            
             if "translated_text" in data:
                 return data["translated_text"]
 
-            # Some versions return directly as string
+           
             if isinstance(data, str):
                 return data
 
-            # Fallback
+          
             return str(data)
 
         else:

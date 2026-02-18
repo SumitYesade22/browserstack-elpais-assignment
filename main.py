@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from scraper import get_first_five_opinion_links, extract_article_data
 from translator import translate_text
+from analyzer import find_repeated_words
 
 
 def get_driver():
@@ -18,9 +19,9 @@ def main():
         links = get_first_five_opinion_links(driver)
 
         for i, link in enumerate(links, start=1):
-            print("\n============================")
+            
             print(f"Article {i}")
-            print("============================")
+            print("______________________")
 
             data = extract_article_data(driver, link)
 
@@ -33,19 +34,33 @@ def main():
             print("\nImage URL:")
             print(data["image_url"])
 
-            # 🔹 Translation happens here
+            # Translation
             translated = translate_text(data["title"])
             translated_titles.append(translated)
 
             print("\nTranslated Title (English):")
             print(translated)
 
-        print("\n============================")
+       
+      
         print("All Translated Titles")
-        print("============================")
+        print("_________________________")
 
         for t in translated_titles:
             print("-", t)
+
+     
+        repeated_words = find_repeated_words(translated_titles)
+
+       
+        print("Repeated Words (Count >= 3)")
+       
+
+        if repeated_words:
+            for word, count in repeated_words.items():
+                print(f"{word} -> {count}")
+        else:
+            print("No words repeated more than twice.")
 
     finally:
         driver.quit()

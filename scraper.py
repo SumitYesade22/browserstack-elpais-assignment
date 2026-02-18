@@ -50,42 +50,42 @@ def extract_article_data(driver, url, image_folder="images"):
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
 
-    # ---------------- TITLE ----------------
+   
     title_tag = soup.find("h1")
     title = title_tag.get_text(strip=True) if title_tag else "No Title Found"
 
-    # ---------------- CONTENT ----------------
+  
     content = ""
 
-    # 1️⃣ Photo gallery / exposure template
+   
     container = soup.select_one("div.a_e_txt_df")
     if container:
         content = container.get_text(separator="\n", strip=True)
 
-    # 2️⃣ Standard article body container
+  
     if not content:
         container = soup.select_one("div[data-dtm-region='articulo_cuerpo']")
         if container:
             content = container.get_text(separator="\n", strip=True)
 
-    # 3️⃣ Generic article container
+   
     if not content:
         container = soup.select_one("article")
         if container:
             content = container.get_text(separator="\n", strip=True)
 
-    # 4️⃣ Final fallback (avoid completely empty)
+    
     if not content:
         content = soup.get_text(separator="\n", strip=True)
 
-    # ---------------- IMAGE ----------------
+    
     image_url = None
     image_tag = soup.select_one("figure img")
 
     if image_tag and image_tag.get("src"):
         image_url = image_tag["src"]
 
-    # ---------------- DOWNLOAD IMAGE ----------------
+    # the image is downloaded here sir
     if image_url:
         os.makedirs(image_folder, exist_ok=True)
 

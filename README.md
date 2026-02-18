@@ -176,8 +176,12 @@ If you add screenshots inside `assets/` folder:
 ![Local Execution](assets/paralleltests.png)
 <br>
 ---
+<div style="margin-bottom:40px;"></div>
+
 ![BrowserStack Parallel](assets/tests1.png)
 <br>
+<div style="margin-bottom:40px;"></div>
+
 ---
 ![Session Recording](assets/tests2.png)
 <br>

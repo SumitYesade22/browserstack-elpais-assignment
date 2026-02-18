@@ -170,25 +170,25 @@ This will:
 
 ---
 
-## 📸 Execution Screenshots (Optional)
+## 📸 Execution Screenshots 
 
 If you add screenshots inside `assets/` folder:
 
 ## 📸 Execution Evidence
 
-### 🔹 Local Execution
+### 🔹 
 
 ![Local Execution](assets/paralleltests.png)
 
 ---
 
-### 🔹 BrowserStack Parallel Build
+### 🔹
 
 ![BrowserStack Parallel](assets/tests1.png)
 
 ---
 
-### 🔹 Sample Session Recording
+### 🔹
 
 ![Session Recording](assets/tests2.png)
 

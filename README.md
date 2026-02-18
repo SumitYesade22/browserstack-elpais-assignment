@@ -108,6 +108,7 @@ browserstack_elpais/
 ├── images/                  # Downloaded cover images
 ├── requirements.txt
 └── README.md
+└── assets/                 
 ```
 
 ---
@@ -173,19 +174,24 @@ This will:
 
 If you add screenshots inside `assets/` folder:
 
+## 📸 Execution Evidence
+
+### 🔹 Local Execution
+
 ![Local Execution](assets/paralleltests.png)
-<br>
+
 ---
-<div style="margin-bottom:40px;"></div>
+
+### 🔹 BrowserStack Parallel Build
 
 ![BrowserStack Parallel](assets/tests1.png)
-<br>
-<div style="margin-bottom:40px;"></div>
 
 ---
+
+### 🔹 Sample Session Recording
+
 ![Session Recording](assets/tests2.png)
-<br>
----
+
 
 
 

@@ -175,13 +175,13 @@ If you add screenshots inside `assets/` folder:
 
 ```markdown
 ### 🔹 Local Execution
-![Local Execution](assets/local_execution.png)
+![Local Execution](paralleltests.png)
 
 ### 🔹 BrowserStack Parallel Build
-![BrowserStack Parallel](assets/browserstack_parallel.png)
+![BrowserStack Parallel](test1.png)
 
 ### 🔹 Sample Session Recording
-![Session Recording](assets/session_video.png)
+![Session Recording](test2.png)
 ```
 
 ---

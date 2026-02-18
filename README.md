@@ -57,13 +57,11 @@ The script scrapes the first 5 articles from the **Opinion** section of El País
 
 The full solution runs across **5 environments in parallel**:
 
-- Windows 11 – Chrome
-- Windows 11 – Edge
-- macOS Ventura – Safari
-- Samsung Galaxy S22 – Chrome
-- iPhone 14 – Safari
-
-Each environment runs the entire scraping + translation workflow independently.
+- Windows 11 – Chrome  
+- Windows 11 – Edge  
+- macOS Ventura – Safari  
+- Samsung Galaxy S22 – Chrome  
+- iPhone 14 – Safari  
 
 Parallel execution is implemented using `ThreadPoolExecutor`.
 
@@ -100,15 +98,15 @@ Local Machine
 ```
 browserstack_elpais/
 │
-├── main.py                  # Local execution
-├── browserstack_runner.py   # Parallel BrowserStack execution
-├── scraper.py               # Scraping logic
-├── translator.py            # Translation API integration
-├── analyzer.py              # Word frequency analysis
-├── images/                  # Downloaded cover images
+├── main.py
+├── browserstack_runner.py
+├── scraper.py
+├── translator.py
+├── analyzer.py
+├── images/
+├── assets/
 ├── requirements.txt
 └── README.md
-└── assets/                 
 ```
 
 ---
@@ -147,13 +145,6 @@ BROWSERSTACK_ACCESS_KEY=your_browserstack_access_key
 python main.py
 ```
 
-This will:
-
-- Scrape first 5 opinion articles
-- Download cover images
-- Translate titles
-- Perform word frequency analysis
-
 ---
 
 ## 🌐 Run on BrowserStack (Parallel Execution)
@@ -162,38 +153,27 @@ This will:
 python browserstack_runner.py
 ```
 
-This will:
-
-- Execute the complete solution remotely
-- Run across 5 browsers/devices in parallel
-- Appear in BrowserStack Automate dashboard
-
 ---
-
-## 📸 Execution Screenshots 
-
-If you add screenshots inside `assets/` folder:
 
 ## 📸 Execution Evidence
 
-### 🔹 
+### 🔹 Local Execution
 
 ![Local Execution](assets/paralleltests.png)
 
 ---
 
-### 🔹
+### 🔹 BrowserStack Parallel Build
 
 ![BrowserStack Parallel](assets/tests1.png)
 
 ---
 
-### 🔹
+### 🔹 Sample Session Recording
 
 ![Session Recording](assets/tests2.png)
 
-
-
+---
 
 ## ✅ Verification
 
@@ -212,10 +192,10 @@ Execution is verified through:
 - Python 3.10
 - Selenium 4
 - Requests
-- RapidAPI (Google Translate)
+- RapidAPI
 - BrowserStack Automate
-- ThreadPoolExecutor (concurrent execution)
-- dotenv (secure credential handling)
+- ThreadPoolExecutor
+- dotenv
 
 ---
 
@@ -223,7 +203,7 @@ Execution is verified through:
 
 - API keys stored securely in `.env`
 - No credentials committed to repository
-- Each BrowserStack session uses independent WebDriver instance
+- Independent WebDriver instance per thread
 
 ---
 
@@ -233,8 +213,4 @@ Execution is verified through:
 ✔ Cover images downloaded  
 ✔ Titles translated via API  
 ✔ Word frequency analysis completed  
-✔ Local validation done  
-✔ BrowserStack parallel execution across 5 environments  
-✔ Verified via cloud session recordings  
-
-Project successfully meets all assignment requirements.
+✔ L

@@ -174,9 +174,11 @@ This will:
 If you add screenshots inside `assets/` folder:
 
 ![Local Execution](assets/paralleltests.png)
+<br>
 ![BrowserStack Parallel](assets/tests1.png)
+<br>
 ![Session Recording](assets/tests2.png)
-
+<br>
 
 
 

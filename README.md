@@ -173,18 +173,12 @@ This will:
 
 If you add screenshots inside `assets/` folder:
 
-```markdown
-### 🔹 Local Execution
-![Local Execution](paralleltests.png)
+![Local Execution](assets/paralleltests.png)
+![BrowserStack Parallel](assets/test1.png)
+![Session Recording](assets/test2.png)
 
-### 🔹 BrowserStack Parallel Build
-![BrowserStack Parallel](test1.png)
 
-### 🔹 Sample Session Recording
-![Session Recording](test2.png)
-```
 
----
 
 ## ✅ Verification
 

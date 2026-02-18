@@ -106,7 +106,6 @@ browserstack_elpais/
 ├── translator.py            # Translation API integration
 ├── analyzer.py              # Word frequency analysis
 ├── images/                  # Downloaded cover images
-├── assets/                  # Screenshots (optional)
 ├── requirements.txt
 └── README.md
 ```
